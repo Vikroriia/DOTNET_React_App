@@ -13,20 +13,20 @@ use OnlineStore
 --- Create TABLES
 create table Products 
 (
-	ID_product int not null identity primary key,
-	ID_category int not null,
+	ID_product bigint not null identity primary key,
+	ID_category bigint not null,
 	PName nvarchar(50) not null,
 	Photo image null,
 	Descript nvarchar(max) null,
 	Avaliability bit not null,
 	Amount decimal(3,0) not null,
 	Cost money not null,
-	ID_sale int null
+	ID_sale bigint null
 );
 create table Categories
 (
-	ID_category int not null identity primary key,
-	ID_subcategory int null,
+	ID_category bigint not null identity primary key,
+	ID_subcategory bigint null,
 	CName nvarchar(50) not null,
 	Photo image null,
 	Descript nvarchar(max) null,
@@ -34,7 +34,7 @@ create table Categories
 );
 create table Sales
 (
-	ID_sale int not null identity primary key,
+	ID_sale bigint not null identity primary key,
 	SName nvarchar(50) not null,
 	Descript nvarchar(max) null,
 	Amount decimal(3,0) not null,
@@ -43,16 +43,16 @@ create table Sales
 );
 create table Items_of_orders
 (
-	ID_item int not null identity primary key,
-	ID_product int not null,
-	ID_order int not null,
+	ID_item bigint not null identity primary key,
+	ID_product bigint not null,
+	ID_order bigint not null,
 	Amount decimal(3,0) not null,
 	Cost money not null
 );
 create table Orders
 (
-	ID_order int not null identity primary key,
-	ID_buyer int not null,
+	ID_order bigint not null identity primary key,
+	ID_buyer bigint not null,
 	ID_statusO int not null,
 	ApplicationDate smalldatetime not null,
 	DeliveryDate date not null,
@@ -80,13 +80,13 @@ create table Payment_methods
 );
 create table Buyers
 (
-	ID_buyer int not null identity primary key,
+	ID_buyer bigint not null identity primary key,
 	LoginProvider nvarchar(20) not null,
 	PasswordProvider nvarchar(20) not null,
 	FirstName nvarchar(50) not null,
 	SecondName nvarchar(50) not null,
 	Email nvarchar(20) not null,
-	Phone varchar(20) not null,
+	Phone varchar(11) not null,
 	ID_addressGroup int not null,
 	AddressResidence nvarchar(100) not null,
 	ID_statusB int not null,
@@ -118,16 +118,16 @@ create table Discounts
 );
 create table Comments
 (
-	ID_comment int not null identity primary key,
-	ID_buyer int not null,
+	ID_comment bigint not null identity primary key,
+	ID_buyer bigint not null,
 	Title nvarchar(50) not null,
 	Content nvarchar(max) not null
 );
 create table Comment_of_product
 (
-	ID_comment_of_product int not null identity primary key,
-	ID_product int not null,
-	ID_comment int not null
+	ID_comment_of_product bigint not null identity primary key,
+	ID_product bigint not null,
+	ID_comment bigint not null
 )
 
 -- Foreign keys
