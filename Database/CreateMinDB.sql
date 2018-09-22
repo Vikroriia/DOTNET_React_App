@@ -12,29 +12,29 @@ use MinOnlineStore
 --- Create TABLES
 create table Products 
 (
-	ID_product bigint not null identity primary key,
+	ID_product int not null identity primary key,
 	PName nvarchar(50) not null,
 	Amount decimal(3,0) not null,
 	Cost money not null
 );
 create table Items_of_orders
 (
-	ID_item bigint not null identity primary key,
-	ID_product bigint not null,
-	ID_order bigint not null,
+	ID_item int not null identity primary key,
+	ID_product int not null,
+	ID_order int not null,
 	Amount decimal(3,0) not null,
 	Cost money not null
 );
 create table Orders
 (
-	ID_order bigint not null identity primary key,
-	ID_user bigint not null,
+	ID_order int not null identity primary key,
+	ID_user int not null,
 	StatusO bit not null,
 	Cost money not null
 );
 create table Users
 (
-	ID_user bigint not null identity primary key,
+	ID_user int not null identity primary key,
 	LoginProvider nvarchar(20) not null,
 	PasswordProvider nvarchar(20) not null,
 	FirstName nvarchar(50) not null,
