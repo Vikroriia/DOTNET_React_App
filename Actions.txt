@@ -2,7 +2,6 @@
 	1.1. Get products 
 	1.2. One product - one group of components:
 			button with PName
-			label with cost
 			buttons "add to cart" (+) and "remove from cart" (-)
 	2.4. Button "back" and "cart"
 			
@@ -19,5 +18,8 @@
 	4.4. Button "Create order"
 	
 5. Click "Create order" -> login or create new User (POST new user) -> create new order (POST new order)
+	5.1. (Create new User) 
+	5.2. Create new Order
+	5.3. Creare new ItemsOfOrders
 
  
