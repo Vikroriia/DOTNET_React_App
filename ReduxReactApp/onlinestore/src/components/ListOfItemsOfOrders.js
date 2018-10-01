@@ -15,6 +15,7 @@ class ListOfItemsOfOrders extends React.Component {
             <div>
                 <h2>You order</h2>
                 {/* <table><tbody>{tbListOfItemsOfOrders}</tbody></table> */}
+                <button>Create order</button>
             </div>
         )
     }

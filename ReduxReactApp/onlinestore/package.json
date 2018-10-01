@@ -2,6 +2,7 @@
   "name": "onlinestore",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://localhost/OnlineStoreRR",
   "dependencies": {
     "axios": "^0.18.0",
     "react": "^16.5.2",
@@ -10,9 +11,11 @@
     "react-scripts": "1.1.5",
     "redux": "^4.0.0",
     "redux-devtools-extension": "^2.13.5",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "source-map-explorer": "^1.6.0"
   },
   "scripts": {
+    "analyze": "source-map-explorer static/js/main.*",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
