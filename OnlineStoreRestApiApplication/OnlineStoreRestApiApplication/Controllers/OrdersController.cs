@@ -9,7 +9,7 @@ namespace OrderServices.Controllers
 {
     public class OrdersController : ODataController
     {
-        OrdersDbContext db = new OrdersDbContext();
+        OnlineStoreDbContext db = new OnlineStoreDbContext();
 
         [EnableQuery]
         public IQueryable<Order> Get()

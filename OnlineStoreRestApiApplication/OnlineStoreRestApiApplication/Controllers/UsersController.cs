@@ -9,7 +9,7 @@ namespace UserServices.Controllers
 {
     public class UsersController : ODataController
     {
-        UsersDbContext db = new UsersDbContext();
+        OnlineStoreDbContext db = new OnlineStoreDbContext();
 
         [EnableQuery]
         public IQueryable<User> Get()

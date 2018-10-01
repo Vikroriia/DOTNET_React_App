@@ -10,7 +10,7 @@ namespace OnlineStoreRestApiApplication.Controllers
 {
     public class ItemsOfOrdersController : ODataController
     {
-        private ItemsOfOrdersDbContext db = new ItemsOfOrdersDbContext();
+        private OnlineStoreDbContext db = new OnlineStoreDbContext();
 
         // GET: odata/ItemsOfOrders
         [EnableQuery]

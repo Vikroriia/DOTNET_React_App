@@ -5,14 +5,16 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using OnlineStoreRestApiApplication.Models;
 using OnlineStoreRestApiApplication.Models.DAL;
+using OnlineStoreRestApiApplication.Attributes;
 
 namespace OnlineStoreRestApiApplication.Controllers
 {
     public class ProductsController : ODataController
     {
-        private ProductsDbContext db = new ProductsDbContext();
+        private OnlineStoreDbContext db = new OnlineStoreDbContext();
 
         // GET: odata/Products
+        [AllowCrossSiteJson]
         [EnableQuery]
         public IQueryable<Product> GetProducts()
         {
