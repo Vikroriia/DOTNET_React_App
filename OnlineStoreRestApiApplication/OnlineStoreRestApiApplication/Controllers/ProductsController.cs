@@ -30,7 +30,7 @@ namespace OnlineStoreRestApiApplication.Controllers
 
         // POST: odata/ItemsOfOrders
         public async Task<IHttpActionResult> Post(Product product)
-        {
+        { 
             db.Products.Add(product);
             await db.SaveChangesAsync();
 
