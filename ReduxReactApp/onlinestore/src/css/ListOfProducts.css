@@ -1,0 +1,68 @@
+.main-content {
+    position: relative;
+    text-align: center;
+    margin: 0% 20% 0% 20%;
+    background-color: ghostwhite;
+}
+
+.table {
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.product-cell {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    text-align: center;
+    padding: 1% 2.7%;
+}
+
+.product-cell:hover {
+    background-image:
+    radial-gradient(2px 45% at 0% 50%, rgba(0,0,0,.6), transparent),
+    radial-gradient(2px 45% at 100% 50%, rgba(0,0,0,.6), transparent); 
+    cursor: pointer;
+    background-color: ghostwhite;
+}
+
+.button-plus, .button-minus {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    color: #000;
+    outline: none;
+    border: 1px solid rgba(209, 218, 223, 0.8);
+    border-top-color: rgba(0,0,0,.3);
+    background: rgb(206, 220, 231) linear-gradient(rgb(206,220,231), rgb(191, 200, 204));
+    box-shadow:
+        0 -1px rgba(10,21,28,.9) inset,
+        0 1px rgba(255,255,255,.5) inset;
+}
+
+.button-plus {
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+
+.button-minus {
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%;
+}
+
+.button-plus:hover, .button-minus:hover {
+    background: linear-gradient(#d2dfea, #71828c);
+}
+
+.button-plus:active, .button-minus:active {
+    background: linear-gradient(#bac6cf, #c5d3de 20%, #71828c);
+    box-shadow: 0 -1px rgba(255,255,255,.4) inset;
+}
+
+.content-align {
+    position: relative;
+    text-align: center;
+}

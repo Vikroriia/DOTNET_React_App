@@ -1,0 +1,44 @@
+.toolbar-main {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    text-align: center;
+    margin: auto;
+    background-color: black
+}
+
+.button-toolbar, .title-toolbar {
+    height: 100%;
+    width: 75px;
+    position: relative;
+    background-color: inherit;
+    color: #f0f8ff;
+    border: 0;
+}
+
+.title-toolbar {
+    right: 16%;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.title-toolbar:hover {
+    cursor: pointer;
+}
+
+.button-toolbar {
+    left: 18%;
+    font-size: 14px;
+}
+
+.button-toolbar:hover {
+    cursor: pointer;
+    font-weight: bolder;
+    border: 0;
+}
+
+.button-toolbar:active {
+    cursor: pointer;
+    font-weight: bolder;
+    border: 0;
+}

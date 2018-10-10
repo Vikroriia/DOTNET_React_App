@@ -26,7 +26,7 @@ export default class ListOfItemsOfOrder extends React.Component {
                         <td><button onClick={()=>{this.props.actionsCreatorsI.removeItemsOfOrder(item)}}>-</button></td>
                         <td>{item.Amount}</td>
                         <td><button onClick={()=>{this.props.actionsCreatorsI.addItemsOfOrder(item)}}>+</button></td>
-                        <td>{item.Cost*item.Amount}</td>
+                        <td>{item.Cost*item.Amount + ' ₽'}</td>
                     </tr>
                 )
             })
@@ -34,7 +34,6 @@ export default class ListOfItemsOfOrder extends React.Component {
 
         return(
             <div>
-                <h2>You order</h2>
                 <table><tbody>
                     {tbListOfItemsOfOrder}
                 </tbody></table>

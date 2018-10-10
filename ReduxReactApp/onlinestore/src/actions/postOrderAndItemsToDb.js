@@ -12,12 +12,12 @@ export function postItemsOfOrderToDb(orderID, items){
     return(dispatch) => {
             items.forEach(item => {
                 return axios.post('/api/itemsoforders', 
-                {
-                    ProductID: item.ProductID,
-                    OrderID: orderID,
-                    Amount: item.Amount,
-                    Cost: item.Cost
-                }).then((response)=>{
+                    {
+                        ProductID: item.ProductID,
+                        OrderID: orderID,
+                        Amount: item.Amount,
+                        Cost: item.Cost
+                    }).then((response)=>{
                 });
             })
         
