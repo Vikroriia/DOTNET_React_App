@@ -3,7 +3,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from "react-redux";
 import * as actionsCreators from "../actions/getProductsFromDb.js"
 import * as actionsCreatorsI from "../actions/createItemsOfOrder.js"
-import * as actionsCreatorsO from "../actions/postOrderAndItemsToDb.js"
+import * as actionsCreatorsO from "../actions/postItemsOfOrderToDb.js"
 import ListOfProducts from "../components/ListOfProducts.js";
 
 class ProductsContainer extends React.Component{

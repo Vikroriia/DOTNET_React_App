@@ -1,0 +1,121 @@
+.cart-content {
+    height: auto;
+    position: relative;
+    text-align: center;
+    margin: 0% 10%;
+}
+
+.emptyCart-firstString, .emptyCart-secondString {
+    width: 100%;
+}
+
+.emptyCart-firstString {
+    font-size: 25px;
+    padding-top: 10%;
+}
+
+.emptyCart-secondString {
+    font-size: 14px;
+    padding: 10px 0px 90% 0px; 
+}
+
+.cart {
+    padding: 20px 30px;
+    text-align: left;
+    font-size: 25px;
+}
+
+.cart-item {
+    height: 100px;
+    padding: 10px 10%;
+    margin: 5px 0px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-image:
+    radial-gradient(50% 2% at bottom, rgba(0,0,0,.6), transparent); 
+    text-align: center;
+}
+
+.cart-item-index, .cart-item-name {
+    padding-top: 40px;
+}
+
+.cart-item-name {
+    font-size: 18px;
+}
+
+.cart-item-amount, .cart-item-cost {
+    padding-top: 25px;
+}
+
+.cart-item-amount-label, .cart-item-cost-label {
+    padding-top: 10px;
+    color: #71828c;
+}
+
+.cart-item-amount {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.button-plus, .button-minus, .button-create-order {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    color: #000;
+    outline: none;
+    border: 1px solid rgba(209, 218, 223, 0.8);
+    border-top-color: rgba(0,0,0,.3);
+    background: rgb(206, 220, 231) linear-gradient(rgb(206,220,231), rgb(191, 200, 204));
+    box-shadow:
+        0 -1px rgba(10,21,28,.9) inset,
+        0 1px rgba(255,255,255,.5) inset;
+}
+
+.button-plus {
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+
+.button-minus {
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%;
+}
+
+.button-create-order {
+    height: 40px;
+    width: 150px;
+    font-size: 16px;
+    margin: 10px 35px 20px 10px;
+    border-radius: 10%;
+}
+
+.button-plus:hover, .button-minus:hover, .button-create-order:hover {
+    background: linear-gradient(#d2dfea, #71828c);
+}
+
+.button-plus:active, .button-minus:active, .button-create-order:active {
+    background: linear-gradient(#bac6cf, #c5d3de 20%, #71828c);
+    box-shadow: 0 -1px rgba(255,255,255,.4) inset;
+}
+
+.cart-total-sum {  
+    padding: 10px 10% 0 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+}
+
+.cart-total-sum-label {
+    margin-right: 16%;
+    font-weight: bolder;
+}
+
+.cart-button-create-order {
+    text-align: right;
+    padding-top: 10px;
+}

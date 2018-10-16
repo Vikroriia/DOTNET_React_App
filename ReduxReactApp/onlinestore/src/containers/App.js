@@ -5,7 +5,7 @@ import ProductsContainer from './ProductsContainer.js';
 import ItemsOfOrderContainer from './ItemsOfOrderContainer.js';
 import * as actionsCreators from '../actions/getProductsFromDb.js';
 import * as actionsCreatorsI from '../actions/createItemsOfOrder.js';
-import * as actionsCreatorsO from '../actions/postOrderAndItemsToDb.js';
+import * as actionsCreatorsO from '../actions/postItemsOfOrderToDb.js';
 import * as styles from '../css/mainToolbar.css'
 
 let actualPage = <ProductsContainer />;
@@ -39,11 +39,13 @@ class App extends React.Component {
       <div>
         <div className = 'toolbar-main'>
           <label className = 'title-toolbar' onClick={() => this.togglePage('products')}>OnlineStore</label>
-          <button className = 'button-toolbar'>Sign In</button>
-          <button className = 'button-toolbar'>Sign Up</button>
-          <button className = 'button-toolbar' onClick={() => this.togglePage('cart')}>Cart</button>
+          <div>
+            <button className = 'button-toolbar'>Sign In</button>
+            <button className = 'button-toolbar'>Sign Up</button>
+            <button className = 'button-toolbar' onClick={() => this.togglePage('cart')}>Cart</button>
+          </div> 
         </div>
-        <div>
+        <div className = 'actual-page'>
           {actualPage}
         </div>
       </div>
