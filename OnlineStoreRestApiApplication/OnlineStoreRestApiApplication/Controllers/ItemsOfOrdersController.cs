@@ -29,6 +29,8 @@ namespace OnlineStoreRestApiApplication.Controllers
         // POST: odata/ItemsOfOrders
         public async Task<IHttpActionResult> Post(ItemsOfOrder itemsOfOrder)
         {
+            itemsOfOrder.Cost = db.Products.Find(itemsOfOrder.ProductID).Cost * itemsOfOrder.Amount;
+
             db.ItemsOfOrders.Add(itemsOfOrder);
             await db.SaveChangesAsync();
 

@@ -1,15 +1,17 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from "react-redux";
-import * as actionsCreators from "../actions/getProductsFromDb.js"
-import * as actionsCreatorsI from "../actions/createItemsOfOrder.js"
-import * as actionsCreatorsO from "../actions/postItemsOfOrderToDb.js"
-import ListOfProducts from "../components/ListOfProducts.js";
+import * as actionsCreators from "../actions/getProductsFromDb.js";
+import * as actionsCreatorsI from "../actions/createItemsOfOrder.js";
+import * as actionsCreatorsO from "../actions/postItemsOfOrderToDb.js";
+import ListOfItemsOfOrder from "../components/ListOfItemsOfOrder.js";
 
-class ProductsContainer extends React.Component{
+class ItemsOfOrderContainer extends React.Component{
     render(){
         return(
-            <ListOfProducts {...this.props}/>
+            <ListOfItemsOfOrder 
+                {...this.props}
+            />
         )
     }
 }
@@ -28,4 +30,4 @@ function mapDispatchToProps(dispatch) {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProductsContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(ItemsOfOrderContainer);

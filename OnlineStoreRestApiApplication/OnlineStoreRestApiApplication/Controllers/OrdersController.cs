@@ -24,9 +24,13 @@ namespace OrderServices.Controllers
             return SingleResult.Create(result);
         }
 
-        // POST: odata/ItemsOfOrders
-        public async Task<IHttpActionResult> Post(Order order)
+        // POST: odata/Orders
+        public async Task<IHttpActionResult> Post(Order order) //, int[] productsID, int[] productsAmount
         {
+            //for (int i = 0; i <= order.ProductsID.Length; i++)
+            //{
+            //    order.Cost += db.Products.Find(order.ProductsID[i]).Cost * order.ProductsAmount[i];
+            //}
             db.Orders.Add(order);
             await db.SaveChangesAsync();
 
