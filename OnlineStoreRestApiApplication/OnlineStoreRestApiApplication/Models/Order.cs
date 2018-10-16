@@ -16,6 +16,8 @@ namespace OnlineStoreRestApiApplication.Models
         public bool StatusO { get; set; }
         public decimal Cost { get; set; }
 
+        //public int[] ProductsID { get; set; }
+        //public int[] ProductsAmount { get; set; }
         public ICollection<ItemsOfOrder> ItemsOfOrders { get; set; }
     }
 }
