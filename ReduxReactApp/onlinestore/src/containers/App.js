@@ -40,8 +40,8 @@ class App extends React.Component {
         <div className = 'toolbar-main'>
           <label className = 'title-toolbar' onClick={() => this.togglePage('products')}>OnlineStore</label>
           <div>
-            <button className = 'button-toolbar'>Sign In</button>
-            <button className = 'button-toolbar'>Sign Up</button>
+            {/* <button className = 'button-toolbar'>Sign In</button>
+            <button className = 'button-toolbar'>Sign Up</button> */}
             <button className = 'button-toolbar' onClick={() => this.togglePage('cart')}>Cart</button>
           </div> 
         </div>

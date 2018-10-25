@@ -1,5 +1,4 @@
 export function loadItemsOfOrder(){
-    console.log("blabla")
     return(dispatch) => {
        dispatch({
             type: "LOAD_PRODUCT_IN_CART"
@@ -15,7 +14,8 @@ export function addItemsOfOrder(product){
                     ProductID: product.ProductID,
                     ProductName: product.PName,
                     Cost: product.Cost,
-                    Amount: 1
+                    Amount: 1,
+                    ProductImage: product.PImage
                 }
             });
     }
@@ -23,14 +23,15 @@ export function addItemsOfOrder(product){
 
 export function removeItemsOfOrder(product, amount){
     return(dispatch) => {
-        if (amount != 0) {
+        if (amount !== 0) {
             dispatch({
                 type: "REMOVE_PRODUCT_FROM_CART",
                 payload: {
                     ProductID: product.ProductID,
                     ProductName: product.PName,
                     Cost: product.Cost,
-                    Amount: -1
+                    Amount: -1,
+                    ProductImage: product.PImage
                 }
             });
         }

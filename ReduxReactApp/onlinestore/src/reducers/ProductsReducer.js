@@ -1,6 +1,7 @@
 const defaultState = {
     listOfProducts: [],
-    listOfItemsOfOrder: []
+    listOfItemsOfOrder: [],
+    idOfSuccessfulOrder: 0
 }
 
 const mainReducer = (state = defaultState, action) => {
@@ -54,6 +55,16 @@ const mainReducer = (state = defaultState, action) => {
             return {
                 ...state,
                 listOfItemsOfOrder: list
+            }
+        case "ORDER_IS_SUCCESSFUL" :
+            return {
+                ...state,
+                idOfSuccessfulOrder: action.idOfSuccessfulOrder
+            }
+        case "ITEMS_ARE_SUCCESSFUL" :
+            return {
+                ...state,
+                listOfItemsOfOrder: action.listOfItemsOfOrder
             }
         default :
             return {

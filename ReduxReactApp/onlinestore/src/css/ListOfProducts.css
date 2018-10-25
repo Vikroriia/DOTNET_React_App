@@ -12,19 +12,16 @@
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
-    margin-left: 4%;
+    justify-content: center;
 }
 
-.product-cell:nth-child(3n) {
-    margin-right: 0;
-}
 
 .product-cell {
     width: auto;
     height: auto;
     position: relative;
-    padding: 1% 4.5%;   
+    text-align: center;
+    padding: 3% 4.5%;   
     transition: all .1s ease;
 }
 
@@ -71,7 +68,6 @@
     box-shadow: 0 -1px rgba(255,255,255,.4) inset;
 }
 
-.content-align {
-    position: relative;
-    text-align: center;
+.not-available-product {
+    color:  rgb(109, 109, 109);
 }
