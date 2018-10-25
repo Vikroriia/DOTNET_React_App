@@ -15,7 +15,8 @@ create table Products
 	ProductID int not null identity primary key,
 	PName nvarchar(50) not null,
 	Amount decimal(3,0) not null,
-	Cost money not null
+	Cost money not null,
+	PImage varbinary(max) not null
 );
 create table ItemsOfOrders
 (
