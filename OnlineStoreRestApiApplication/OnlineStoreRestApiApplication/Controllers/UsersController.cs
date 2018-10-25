@@ -25,6 +25,7 @@ namespace UserServices.Controllers
         }
 
         // POST: odata/ItemsOfOrders
+        [HttpPost]
         public async Task<IHttpActionResult> Post(User user)
         {
             db.Users.Add(user);

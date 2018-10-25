@@ -19,22 +19,21 @@ namespace OnlineStoreRestApiApplication.Controllers
             return db.ItemsOfOrders;
         }
 
-        // GET: odata/ItemsOfOrders(5)
-        [EnableQuery]
-        public SingleResult<ItemsOfOrder> GetItemOfOrder([FromODataUri] int key)
-        {
-            return SingleResult.Create(db.ItemsOfOrders.Where(itemOfOrder => itemOfOrder.ItemID == key));
-        }
+        // GET: odata/ItemsOfOrdersByOrder(5)
+        //[EnableQuery]
+        //public IQueryable<ItemsOfOrder> GetItemOfOrders(int key)
+        //{
+        //    return db.ItemsOfOrders.Where(itemOfOrder => itemOfOrder.OrderID == key);
+        //}
 
-        // POST: odata/ItemsOfOrders
+        // POST: odata/ItemsOfOrder
         public async Task<IHttpActionResult> Post(ItemsOfOrder itemsOfOrder)
         {
-            itemsOfOrder.Cost = db.Products.Find(itemsOfOrder.ProductID).Cost * itemsOfOrder.Amount;
-
             db.ItemsOfOrders.Add(itemsOfOrder);
             await db.SaveChangesAsync();
 
             return Created(itemsOfOrder);
         }
     }
+        
 }

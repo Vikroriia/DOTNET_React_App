@@ -27,15 +27,6 @@ namespace OnlineStoreRestApiApplication.Controllers
         {
             return SingleResult.Create(db.Products.Where(product => product.ProductID == key));
         }
-
-        // POST: odata/Products
-        public async Task<IHttpActionResult> Post(Product product)
-        { 
-            db.Products.Add(product);
-            await db.SaveChangesAsync();
-
-            return Created(product);
-        }
-
+        
     }
 }

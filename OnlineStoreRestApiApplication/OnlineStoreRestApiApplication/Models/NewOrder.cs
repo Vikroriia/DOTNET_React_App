@@ -1,20 +1,16 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace OnlineStoreRestApiApplication.Models
 {
-    public class Order
+    public class NewOrder
     {
         [Key]
-        public int OrderID { get; set; }
-
-        [ForeignKey("User")]
+        public int Id { get; set; }
         public int UserID { get; set; }
-        public User User { get; set; }
-
         public bool StatusO { get; set; }
         public decimal Cost { get; set; }
-        public ICollection<ItemsOfOrder> ItemsOfOrders { get; set; }
+        public int[] ProductsID { get; set; }
+        public decimal[] ProductsAmount { get; set; }
     }
 }
