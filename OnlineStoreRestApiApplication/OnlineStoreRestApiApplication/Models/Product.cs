@@ -10,7 +10,7 @@ namespace OnlineStoreRestApiApplication.Models
         public string PName { get; set; }
         public decimal Amount { get; set; }
         public decimal Cost { get; set; }
-        public byte[] PImage { get; set; }
+        public string PImageName { get; set; }
 
         public ICollection<ItemsOfOrder> ItemsOfOrders { get; set; }
     }
