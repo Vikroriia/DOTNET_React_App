@@ -15,7 +15,10 @@ export function addItemsOfOrder(product){
                     ProductName: product.PName,
                     Cost: product.Cost,
                     Amount: 1,
-                    ProductImage: product.PImage
+                    ProductImage: product.PImageName,
+                    Renamed: false,
+                    TooMuch: false,
+                    ChangedCost: false
                 }
             });
     }
@@ -31,7 +34,10 @@ export function removeItemsOfOrder(product, amount){
                     ProductName: product.PName,
                     Cost: product.Cost,
                     Amount: -1,
-                    ProductImage: product.PImage
+                    ProductImage: product.PImageName,
+                    Renamed: false,
+                    TooMuch: false,
+                    ChangedCost: false
                 }
             });
         }

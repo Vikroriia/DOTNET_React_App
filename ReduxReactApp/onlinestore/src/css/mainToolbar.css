@@ -50,3 +50,19 @@
     padding-bottom: 5%;
     background-color: ghostwhite;
 }
+
+.button-cart {
+    background: url(http://localhost/OnlineStoreRR/Icons/shopping-bag.png);
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}
+
+.button-cart:hover, .button-cart:active {
+    background: url(http://localhost/OnlineStoreRR/Icons/shopping-bag-active.png);
+    background-size: 50px 50px;
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+}

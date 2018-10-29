@@ -42,7 +42,7 @@ class App extends React.Component {
           <div>
             {/* <button className = 'button-toolbar'>Sign In</button>
             <button className = 'button-toolbar'>Sign Up</button> */}
-            <button className = 'button-toolbar' onClick={() => this.togglePage('cart')}>Cart</button>
+            <button className = {'button-toolbar'+' '+'button-cart'} onClick={() => this.togglePage('cart')}></button>
           </div> 
         </div>
         <div className = 'actual-page'>

@@ -33,6 +33,13 @@
     background-color: transparent;
 }
 
+.product-cell-amount-block {
+    width: 70px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
 .button-plus, .button-minus {
     position: relative;
     display: inline-block;

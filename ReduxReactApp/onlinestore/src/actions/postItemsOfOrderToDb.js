@@ -14,18 +14,3 @@ export const getIdOfSuccessfulOrder = (idNewOrder) => {
         idOfSuccessfulOrder: idNewOrder
     }
 }
-
-// export function getSuccessfulItemsOfOrder(newOrderId){
-//     return(dispatch) => {
-//         return axios.get('/api/itemsoforders', {params: {key: newOrderId}}).then((response)=>{
-//             dispatch(getItemsOfSuccessfulOrder(response.data.value));
-//         })
-//     }
-// }
-
-// export const getItemsOfSuccessfulOrder = (listOfItemsOfOrder) => {
-//     return {
-//         type: "ITEMS_ARE_SUCCESSFUL",
-//         listOfItemsOfOrder: listOfItemsOfOrder
-//     }
-// }
