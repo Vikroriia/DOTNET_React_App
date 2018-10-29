@@ -24,7 +24,7 @@ export default class ListOfProducts extends React.Component {
                     )
                 } else {
                     tbEnableActionCart[product.ProductID] = (
-                        <div>
+                        <div className = 'product-cell-amount-block'>
                                 <button className = 'button-minus' onClick={()=>{this.props.actionsCreatorsI.removeItemsOfOrder(product, product.AmountInItem)}}>-</button>
                                 <label>{' ' + product.AmountInItem + ' '}</label>
                                 <button className = 'button-plus' onClick={()=>{this.props.actionsCreatorsI.addItemsOfOrder(product)}}>+</button>
@@ -33,12 +33,10 @@ export default class ListOfProducts extends React.Component {
                 }
             });
 
-            //var imgsrc = "data:image/png;base64,"+btoa(product.PImage);
-
             tbListOfProduct.push(
                 <div className = 'product-cell'>
                     <div>
-                        <img src = 'https://www.hobbyportal.ru/data/products/cache/2018may/11/34/204023_63566-450x450.jpg' width="150px" height="150px" alt={product.PName}/>
+                        <img src = {'./images/'+product.PImageName} width="150px" height="150px" alt={product.PName}/>
                     </div>
                     <div>{product.PName}</div>
                     <div>

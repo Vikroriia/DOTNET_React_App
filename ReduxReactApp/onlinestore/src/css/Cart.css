@@ -19,7 +19,7 @@
 
 .emptyCart-secondString {
     font-size: 14px;
-    padding: 10px 0px 90% 0px; 
+    padding: 10px 0px 10% 0px; 
 }
 
 .successfulOrder-secondString {
@@ -45,16 +45,25 @@
     text-align: center;
 }
 
-.cart-item-index, .cart-item-name {
+.cart-item-index {
+    width: 30px;
     padding-top: 40px;
 }
 
+.cart-item-name {
+    width: 300px;
+    padding-top: 40px;
+}
 .order-item-index, .order-item-name {
     padding-top: 20px;
 }
 
 .cart-item-name, .order-item-name {
     font-size: 18px;
+}
+
+.cart-item-amount-block, .cart-item-cost-block {
+    width: 70px;
 }
 
 .cart-item-amount, .cart-item-cost {
@@ -120,7 +129,7 @@
 }
 
 .cart-total-sum {  
-    padding: 10px 10% 0 0;
+    padding: 10px 12% 0 0;
     display: flex;
     flex-wrap: nowrap;
     justify-content: flex-end;
@@ -130,4 +139,8 @@
 .cart-button-create-order {
     text-align: right;
     padding-top: 10px;
+}
+
+.cart-success-items-error {
+    color: red;
 }
